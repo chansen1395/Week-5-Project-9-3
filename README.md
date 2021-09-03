@@ -28,7 +28,7 @@ _This application has been created to demonstrate using a project template and i
   - Life Expectancy (default region): 72
 * On Mercury, a person with these parameters is expected to live another 4.2 Mercury-years.
   - Age: 71
-  - In unhealthy condition.
+  - In healthy condition.
   - Life Expectancy (default region): 72
 
 

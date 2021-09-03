@@ -52,7 +52,7 @@ describe('AgeCalc', () => {
     // General Planet Tester
     // *********************  
     test('Should calculate age and years left on Mercury', () => {
-        expect(reusableCalc.expectancyPlanet()).toEqual(4.2);
+        expect(reusableCalc.expectancyPlanet()).toBe(4.2);
         expect(reusableCalc.lifeOnPlanet()).toEqual(295.8);
     });
 

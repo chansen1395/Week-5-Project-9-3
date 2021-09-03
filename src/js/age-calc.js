@@ -3,7 +3,7 @@ export default class AgeCalc {
     this.age = age;
     this.healthy = healthy;
     this.userRegion = userRegion;
-    this.region = {"antarctica": 35, "north-america": 70};
+    this.region = {"antarctica": 35, "north-america": 70, "europe": 74, "asia": 77};
     this.planet = planet;
     this.planets = {"mercury": .24, "venus": .62, "mars": 1.88, "jupiter": 11.86};
     this.expectancy = 72;
