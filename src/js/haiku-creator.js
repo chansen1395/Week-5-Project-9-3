@@ -72,7 +72,7 @@
   //   }
   //   return isFive;
   // }
-}
+// }
 
 
 // if a word ends in "e", subtract one syllable right off the bat:
