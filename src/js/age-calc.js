@@ -1,12 +1,12 @@
 export default class AgeCalc {
-  constructor(ageStart, lifeExpectancy) {
-    this.age = ageStart;
-    this.yrsLeft = lifeExpectancy;
+  constructor(age, yrsLeft) {
+    this.age = age;
+    this.yrsLeft = yrsLeft;
   }
 
 
-  lifeExpec() {
-    this.yrsLeft = (72 - this.age);
+  lifeExpec(age) {
+    this.yrsLeft = (72 - age);
     return this.yrsLeft;
   }
 
@@ -16,7 +16,7 @@ export default class AgeCalc {
   }
 
   expecMercury() {
-    this.yrsLeft = (this.lifeExpec() / .24).toFixed(2);
+    this.yrsLeft = (this.lifeExpec(this.age) / .24).toFixed(2);
     return parseFloat(this.yrsLeft);
   }
 
@@ -26,7 +26,10 @@ export default class AgeCalc {
   }
 
   expecVenus() {
-    this.yrsLeft = (this.lifeExpec() / .62).toFixed(2);
+    let age = this.age;
+    console.log("age: " + this.yrsLeft);
+    console.log("age: " + age);
+    this.yrsLeft = (this.lifeExpec(age) / .62).toFixed(2);
     return parseFloat(this.yrsLeft);
   }
 
