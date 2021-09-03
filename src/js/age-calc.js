@@ -5,7 +5,8 @@ export default class AgeCalc {
     this.healthy = healthy;
   }
 
-
+  // Overall age of a person is not affected by health. Only years remaining is
+  // adjusted.
   lifeExpec() {
     this.yrsLeft = (72 - this.age);
     if (!this.healthy) {
