@@ -1,6 +1,12 @@
 export default class AgeCalc {
-  constructor(ageStart) {
+  constructor(ageStart, lifeExpectancy) {
     this.age = ageStart;
+    this.expec = lifeExpectancy;
+  }
+
+  lifeExpec() {
+    this.expec = (72 - this.age);
+    return this.expec;
   }
 
   onMercury() {
