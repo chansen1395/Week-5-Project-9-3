@@ -73,15 +73,17 @@ describe('AgeCalc', () => {
     // Mars Tests
     // *************
     test('Should calculate age and years left on Mars', () => {
-      expect(reusableCalc.expecMars()).toEqual(.5);
-      expect(reusableCalc.onMars()).toEqual(37.8);
+      const newCalc = new AgeCalc(71, 1, true, "", "mars");
+      expect(newCalc.lifeOnPlanet()).toEqual(37.8);
     });
 
     // *************
     // Jupiter Tests
     // *************
     test('Should calculate age and years left on Jupiter', () => {
-      expect(reusableCalc.expecJupiter()).toEqual(.1);
-      expect(reusableCalc.onJupiter()).toEqual(6);
+      const newCalc = new AgeCalc(71, 1, true, "", "jupiter");
+      expect(newCalc.lifeOnPlanet()).toEqual(6);
+      // expect(reusableCalc.expecJupiter()).toEqual(.1);
+      // expect(reusableCalc.onJupiter()).toEqual(6);
     });
   });
