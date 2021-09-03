@@ -29,4 +29,16 @@ export default class AgeCalc {
     this.yrsLeft = (this.lifeExpec() / .62).toFixed(2);
     return parseFloat(this.yrsLeft);
   }
+
+  onMars() {
+    console.log("age: " + this.age);
+    this.age = ((this.age / 1.88).toFixed(2));
+    console.log("age: " + this.age);
+    return parseFloat(this.age);
+  }
+
+  expecMars() {
+    // this.yrsLeft = (this.lifeExpec() / 1.88).toFixed(2);
+    // return parseFloat(this.yrsLeft);
+  }
 }

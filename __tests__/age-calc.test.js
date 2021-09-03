@@ -46,4 +46,22 @@ describe('AgeCalc', () => {
         expect(newCalc.onVenus()).toBeLessThanOrEqual(114.52);
         expect(newCalc.onVenus()).toBeGreaterThanOrEqual(114.50);
     });
+
+    // *************
+    // Mars Tests
+    // *************
+    test('Should calculate age on Mars', () => {
+        const newCalc = new AgeCalc(1);
+        let marsAge = newCalc.onMars();
+        expect(marsAge).toBeLessThanOrEqual(.54);
+        expect(marsAge).toBeGreaterThanOrEqual(.52);
+    });
+  
+    // test('Should calculate age and years left on Mars', () => {
+    //     const newCalc = new AgeCalc(71, 0);
+    //     expect(newCalc.expecMars()).toBeLessThanOrEqual(1.62);
+    //     expect(newCalc.expecMars()).toBeGreaterThanOrEqual(1.60);
+    //     expect(newCalc.onMars()).toBeLessThanOrEqual(37.77);
+    //     expect(newCalc.onMars()).toBeGreaterThanOrEqual(37.75);
+    // });
   });
