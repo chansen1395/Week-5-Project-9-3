@@ -1,45 +1,47 @@
-export default class Haiku {
-  constructor(line1, line2, line3) {
-    this.line1 = line1;
-    this.line2 = line2;
-    this.line3 = line3;
-    // the reason .trim().replace(/[.,!?]/g, "") cause failures could
-    // be because some tests do not use 3 parameters
-  }
+// export default class Haiku {
+//   constructor(line1, line2, line3) {
+//     this.line1 = line1;
+//     this.line2 = line2;
+//     this.line3 = line3;
+//     // the reason .trim().replace(/[.,!?]/g, "") cause failures could
+//     // be because some tests do not use 3 parameters
+//   }
   
-  checkSyl(line) {
-    let words = line.split(" ");
-    console.log("Array of words: " + words);
-    const vowels = ["a", "e", "i", "o", "u", "y"];
-    let vowelCount = 0;
+  // checkSyl(line) {
+  //   let words = line.split(" ");
+  //   console.log("Array of words: " + words);
+  //   const vowels = ["a", "e", "i", "o", "u", "y"];
+  //   let vowelCount = 0;
 
-    for (let i = 0; i < words.length; i++) {
-      let chars = words[i].split("");
-      for (let n = 0; n < chars.length; n++) {
-        if (vowels.includes(chars[n])) {
-          vowelCount++;
-        }
-        if ((vowels.includes(chars[n])) && (vowels.includes(chars[n + 1]))) {
-          vowelCount--;
-        }
-      }
-      if ((chars[chars.length - 1] === vowels[1]) && (chars[chars.length - 2] != "l")) {
-        vowelCount--;
-      }
-    }
-    return vowelCount;
-  }
+  //   for (let i = 0; i < words.length; i++) {
+  //     let chars = words[i].split("");
+  //     for (let n = 0; n < chars.length; n++) {
+  //       if (vowels.includes(chars[n])) {
+  //         vowelCount++;
+  //       }
+  //       if ((vowels.includes(chars[n])) && (vowels.includes(chars[n + 1]))) {
+  //         vowelCount--;
+  //       }
+  //     }
+  //     if ((chars[chars.length - 1] === vowels[1]) && (chars[chars.length - 2] != "l")) {
+  //       vowelCount--;
+  //     }
+  //   }
+  //   return vowelCount;
+  // }
 
-  checkLines() {
-    let isHaiku = false;
-    let firstLine = this.checkSyl(this.line1);
-    let secondLine = this.checkSyl(this.line2);
-    let thirdLine = this.checkSyl(this.line3);
-    if ((firstLine === 5) && (secondLine === 7) && (thirdLine === 5)) { 
-      isHaiku = true;
-    } 
-    return isHaiku;
-  }
+  // checkLines() {
+  //   let isHaiku = false;
+  //   let firstLine = this.checkSyl(this.line1);
+  //   let secondLine = this.checkSyl(this.line2);
+  //   let thirdLine = this.checkSyl(this.line3);
+  //   if ((firstLine === 5) && (secondLine === 7) && (thirdLine === 5)) { 
+  //     isHaiku = true;
+  //   } 
+  //   return isHaiku;
+  // }
+
+
 
   // generator(sylLeft)
   // **sylLeft = 5 or 7;**
