@@ -2,11 +2,13 @@ import AgeCalc from './../src/js/age-calc.js';
 
 describe('AgeCalc', () => {
   
+  // ** Unused. Could implement and just test one planet to cover all lines. **
   let reusableCalc;
 
   beforeEach(() => {
-    reusableCalc = new AgeCalc(71, true);
+    reusableCalc = new AgeCalc(71, true, "north-america", "mercury");
   });
+  // **
 
   test('Should create a new instance of an Age Calculator', () => {
       let newCalc = new AgeCalc(50, true);
@@ -46,39 +48,53 @@ describe('AgeCalc', () => {
       expect(newCalc.lifeOnPlanet()).toEqual(295.8);
     });
     
-    // *************
-    // Mercury Tests
-    // *************  
+    // *********************
+    // General Planet Tester
+    // *********************  
     test('Should calculate age and years left on Mercury', () => {
-        const newCalc = new AgeCalc(71, true, "", "mercury");
-        expect(newCalc.expectancyPlanet()).toEqual(4.2);
-        expect(newCalc.lifeOnPlanet()).toEqual(295.8);
+        expect(reusableCalc.expectancyPlanet()).toEqual(4.2);
+        expect(reusableCalc.lifeOnPlanet()).toEqual(295.8);
     });
+
+
+    // |||  OLD  ||| //
+    // ||| TESTS ||| //
+
+
+
+    // // *************
+    // // Mercury Tests
+    // // *************  
+    // test('Should calculate age and years left on Mercury', () => {
+    //     const newCalc = new AgeCalc(71, true, "", "mercury");
+    //     expect(newCalc.expectancyPlanet()).toEqual(4.2);
+    //     expect(newCalc.lifeOnPlanet()).toEqual(295.8);
+    // });
     
-    // *************
-    // Venus Tests
-    // *************
-    test('Should calculate age and years left on Venus', () => {
-      const newCalc = new AgeCalc(71, true, "", "venus");
-      expect(newCalc.expectancyPlanet()).toEqual(1.6);
-      expect(newCalc.lifeOnPlanet()).toEqual(114.5);
-    });
+    // // *************
+    // // Venus Tests
+    // // *************
+    // test('Should calculate age and years left on Venus', () => {
+    //   const newCalc = new AgeCalc(71, true, "", "venus");
+    //   expect(newCalc.expectancyPlanet()).toEqual(1.6);
+    //   expect(newCalc.lifeOnPlanet()).toEqual(114.5);
+    // });
 
-    // *************
-    // Mars Tests
-    // *************
-    test('Should calculate age and years left on Mars', () => {
-      const newCalc = new AgeCalc(71, true, "", "mars");
-      expect(newCalc.expectancyPlanet()).toEqual(.5);
-      expect(newCalc.lifeOnPlanet()).toEqual(37.8);
-    });
+    // // *************
+    // // Mars Tests
+    // // *************
+    // test('Should calculate age and years left on Mars', () => {
+    //   const newCalc = new AgeCalc(71, true, "", "mars");
+    //   expect(newCalc.expectancyPlanet()).toEqual(.5);
+    //   expect(newCalc.lifeOnPlanet()).toEqual(37.8);
+    // });
 
-    // *************
-    // Jupiter Tests
-    // *************
-    test('Should calculate age and years left on Jupiter', () => {
-      const newCalc = new AgeCalc(71, true, "", "jupiter");
-      expect(newCalc.expectancyPlanet()).toEqual(.1);
-      expect(newCalc.lifeOnPlanet()).toEqual(6);
-    });
+    // // *************
+    // // Jupiter Tests
+    // // *************
+    // test('Should calculate age and years left on Jupiter', () => {
+    //   const newCalc = new AgeCalc(71, true, "", "jupiter");
+    //   expect(newCalc.expectancyPlanet()).toEqual(.1);
+    //   expect(newCalc.lifeOnPlanet()).toEqual(6);
+    // });
   });
