@@ -11,33 +11,32 @@ export default class AgeCalc {
   }
 
   onMercury() {
-    this.age = ((this.age / .24).toFixed(2));
+    this.age = ((this.age / .24).toFixed(1));
     return parseFloat(this.age);
   }
 
   expecMercury() {
-    this.yrsLeft = (this.lifeExpec() / .24).toFixed(2);
+    this.yrsLeft = (this.lifeExpec() / .24).toFixed(1);
     return parseFloat(this.yrsLeft);
   }
 
   onVenus() {
-    this.age = ((this.age / .62).toFixed(2));
+    this.age = ((this.age / .62).toFixed(1));
     return parseFloat(this.age);
   }
 
   expecVenus() {
-
-    this.yrsLeft = (this.lifeExpec() / .62).toFixed(2);
+    this.yrsLeft = (this.lifeExpec() / .62).toFixed(1);
     return parseFloat(this.yrsLeft);
   }
 
   onMars() {
-    this.age = ((this.age / 1.88).toFixed(2));
+    this.age = ((this.age / 1.88).toFixed(1));
     return parseFloat(this.age);
   }
 
   expecMars() {
-    // this.yrsLeft = (this.lifeExpec() / 1.88).toFixed(2);
-    // return parseFloat(this.yrsLeft);
+    this.yrsLeft = (this.lifeExpec() / 1.88).toFixed(1);
+    return parseFloat(this.yrsLeft);
   }
 }

@@ -42,18 +42,8 @@ describe('AgeCalc', () => {
     // *************
     // Mars Tests
     // *************
-    test('Should calculate age on Mars', () => {
-        const newCalc = new AgeCalc(1);
-        let marsAge = newCalc.onMars();
-        expect(marsAge).toBeLessThanOrEqual(.54);
-        expect(marsAge).toBeGreaterThanOrEqual(.52);
+    test('Should calculate age and years left on Mars', () => {
+      expect(reusableCalc.expecMars()).toEqual(.5);
+      expect(reusableCalc.onMars()).toEqual(37.8);
     });
-  
-    // test('Should calculate age and years left on Mars', () => {
-    //     const newCalc = new AgeCalc(71, 1);
-    //     expect(newCalc.expecMars()).toBeLessThanOrEqual(1.62);
-    //     expect(newCalc.expecMars()).toBeGreaterThanOrEqual(1.60);
-    //     expect(newCalc.onMars()).toBeLessThanOrEqual(37.77);
-    //     expect(newCalc.onMars()).toBeGreaterThanOrEqual(37.75);
-    // });
   });
