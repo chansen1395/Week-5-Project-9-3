@@ -11,5 +11,10 @@ describe('AgeCalc', () => {
         const newCalc = new AgeCalc(1);
         expect(newCalc.onMercury()).toBeLessThanOrEqual(4.20);
         expect(newCalc.onMercury()).toBeGreaterThanOrEqual(4.10);
-      });
+    });
+
+    test('Should calculate age expectancy', () => {
+        const newCalc = new AgeCalc(71);
+        expect(newCalc.lifeExpec()).toEqual(1);
+    });
 });
