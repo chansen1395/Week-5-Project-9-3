@@ -8,28 +8,21 @@ describe('AgeCalc', () => {
     reusableCalc = new AgeCalc(71, 1);
   });
 
-  // test('Should create a new instance of an Age Calculator', () => {
-  //     let newCalc = new AgeCalc(50, 22);
-  //     expect(newCalc.age).toEqual(50);
-  //     expect(newCalc.yrsLeft).toEqual(22);
-  //   });
+  test('Should create a new instance of an Age Calculator', () => {
+      let newCalc = new AgeCalc(50, 22);
+      expect(newCalc.age).toEqual(50);
+      expect(newCalc.yrsLeft).toEqual(22);
+    });
     
-  //   test('Should calculate age expectancy', () => {
-  //     const newCalc = new AgeCalc(71);
-  //     expect(newCalc.lifeExpec()).toEqual(1);
-  //   });
+    test('Should calculate age expectancy', () => {
+      const newCalc = new AgeCalc(71, 1);
+      expect(newCalc.lifeExpec()).toEqual(1);
+    });
 
     // *************
     // Mercury Tests
-    // *************
-    test('Should calculate age on Mercury', () => {
-        const newCalc = new AgeCalc(1);
-        expect(newCalc.onMercury()).toBeLessThanOrEqual(4.20);
-        expect(newCalc.onMercury()).toBeGreaterThanOrEqual(4.10);
-    });
-  
+    // *************  
     test('Should calculate age and years left on Mercury', () => {
-        // const newCalc = new AgeCalc(71, 0);
         expect(reusableCalc.expecMercury()).toBeLessThanOrEqual(4.20);
         expect(reusableCalc.expecMercury()).toBeGreaterThanOrEqual(4.10);
         expect(reusableCalc.onMercury()).toBeLessThanOrEqual(295.90);
@@ -39,22 +32,11 @@ describe('AgeCalc', () => {
     // *************
     // Venus Tests
     // *************
-    test('Should calculate age on Venus', () => {
-        const newCalc = new AgeCalc(1);
-        let venusAge = newCalc.onVenus();
-        expect(venusAge).toBeLessThanOrEqual(1.62);
-        expect(venusAge).toBeGreaterThanOrEqual(1.60);
-    });
-  
     test('Should calculate age and years left on Venus', () => {
-        const newVenus = new AgeCalc(71, 1);
-        let venusExpec = newVenus.expecVenus();
-        let venusAge = newVenus.onVenus();
-        console.log("venus" + venusExpec);
-        expect(venusAge).toBeLessThanOrEqual(114.52);
-        expect(venusAge).toBeGreaterThanOrEqual(114.50);
-        expect(venusExpec).toBeLessThanOrEqual(1.62);
-        expect(venusExpec).toBeGreaterThanOrEqual(1.60);
+        expect(reusableCalc.expecVenus()).toBeLessThanOrEqual(1.62);
+        expect(reusableCalc.expecVenus()).toBeGreaterThanOrEqual(1.60);
+        expect(reusableCalc.onVenus()).toBeLessThanOrEqual(114.52);
+        expect(reusableCalc.onVenus()).toBeGreaterThanOrEqual(114.50);
     });
 
     // *************

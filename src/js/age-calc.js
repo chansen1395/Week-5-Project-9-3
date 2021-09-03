@@ -5,8 +5,8 @@ export default class AgeCalc {
   }
 
 
-  lifeExpec(age) {
-    this.yrsLeft = (72 - age);
+  lifeExpec() {
+    this.yrsLeft = (72 - this.age);
     return this.yrsLeft;
   }
 
@@ -16,7 +16,7 @@ export default class AgeCalc {
   }
 
   expecMercury() {
-    this.yrsLeft = (this.lifeExpec(this.age) / .24).toFixed(2);
+    this.yrsLeft = (this.lifeExpec() / .24).toFixed(2);
     return parseFloat(this.yrsLeft);
   }
 
@@ -26,17 +26,13 @@ export default class AgeCalc {
   }
 
   expecVenus() {
-    let age = this.age;
-    console.log("age: " + this.yrsLeft);
-    console.log("age: " + age);
-    this.yrsLeft = (this.lifeExpec(age) / .62).toFixed(2);
+
+    this.yrsLeft = (this.lifeExpec() / .62).toFixed(2);
     return parseFloat(this.yrsLeft);
   }
 
   onMars() {
-    console.log("age: " + this.age);
     this.age = ((this.age / 1.88).toFixed(2));
-    console.log("age: " + this.age);
     return parseFloat(this.age);
   }
 
