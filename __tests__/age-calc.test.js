@@ -5,23 +5,37 @@ describe('AgeCalc', () => {
   let reusableCalc;
 
   beforeEach(() => {
-    reusableCalc = new AgeCalc(71, 1, true);
+    reusableCalc = new AgeCalc(71, 0, true);
   });
 
   test('Should create a new instance of an Age Calculator', () => {
       let newCalc = new AgeCalc(50, 22, true);
       expect(newCalc.age).toEqual(50);
       expect(newCalc.yrsLeft).toEqual(22);
+      expect(newCalc.healthy).toEqual(true);
+    });
+
+  test('Should calculate the life expectancy', () => {
+      let newCalc = new AgeCalc(50, 0, true, region);
+      expect(newCalc.lifeExpec()).toEqual(35);
+      // if user lives in Antarctica, life expectancy = 35
+      // if user lives in America, life expectancy = 72
     });
     
     test('Should calculate age expectancy of healhty individual', () => {
       const newCalc = new AgeCalc(71, 1, true);
       expect(newCalc.lifeExpec()).toEqual(1);
     });
+
     test('Should calculate age expectancy of unhealthy individual', () => {
       const newCalc = new AgeCalc(71, 1, false);
       expect(newCalc.lifeExpec()).toEqual(.85);
     });
+
+    // test('Should calculate age expectancy of unhealthy individual', () => {
+    //   const newCalc = new AgeCalc(71, 1, true);
+    //   expect(newCalc.lifeExpec()).toEqual(.85);
+    // });
 
     // *************
     // Mercury Tests

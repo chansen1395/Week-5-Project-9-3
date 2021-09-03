@@ -1,13 +1,22 @@
 export default class AgeCalc {
-  constructor(age, yrsLeft, healthy) {
+  constructor(age, yrsLeft, healthy, regionExpec) {
     this.age = age;
     this.yrsLeft = yrsLeft;
     this.healthy = healthy;
+    this.expectancy = 72;
+    this.regionExpec = regionExpec;
+    this.region = {antarctica: 35};
+    // this.overExpec = overExpec;
   }
 
   // Overall age of a person is not affected by health. Only years remaining is
   // adjusted.
   lifeExpec() {
+    for (let i = "" in this.region) {
+      if (this.regionExpec === this.region[i]) {
+        excpectancy = this.region[i];
+      } else {};
+    }
     this.yrsLeft = (72 - this.age);
     if (!this.healthy) {
       this.yrsLeft = (this.yrsLeft * .85);
