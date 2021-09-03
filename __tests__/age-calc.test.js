@@ -5,17 +5,17 @@ describe('AgeCalc', () => {
   let reusableCalc;
 
   beforeEach(() => {
-    reusableCalc = new AgeCalc(71, 1);
+    reusableCalc = new AgeCalc(71, 1, true);
   });
 
   test('Should create a new instance of an Age Calculator', () => {
-      let newCalc = new AgeCalc(50, 22);
+      let newCalc = new AgeCalc(50, 22, true);
       expect(newCalc.age).toEqual(50);
       expect(newCalc.yrsLeft).toEqual(22);
     });
     
     test('Should calculate age expectancy', () => {
-      const newCalc = new AgeCalc(71, 1);
+      const newCalc = new AgeCalc(71, 1, true);
       expect(newCalc.lifeExpec()).toEqual(1);
     });
 

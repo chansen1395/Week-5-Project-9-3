@@ -1,12 +1,16 @@
 export default class AgeCalc {
-  constructor(age, yrsLeft) {
+  constructor(age, yrsLeft, healthy) {
     this.age = age;
     this.yrsLeft = yrsLeft;
+    this.healthy = healthy;
   }
 
 
   lifeExpec() {
     this.yrsLeft = (72 - this.age);
+    if (!this.healthy) {
+      this.yrsLeft = (this.yrsLeft * .85);
+    }
     return this.yrsLeft;
   }
 
