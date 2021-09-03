@@ -35,8 +35,8 @@ describe('AgeCalc', () => {
     // *************
     test('Should calculate age on Venus', () => {
         const newCalc = new AgeCalc(1);
-        expect(newCalc.onVenus()).toBeLessThanOrEqual(1.60);
-        expect(newCalc.onVenus()).toBeGreaterThanOrEqual(1.62);
+        expect(newCalc.onVenus()).toBeLessThanOrEqual(1.62);
+        expect(newCalc.onVenus()).toBeGreaterThanOrEqual(1.60);
     });
   
     // test('Should calculate age and years left on Venus', () => {

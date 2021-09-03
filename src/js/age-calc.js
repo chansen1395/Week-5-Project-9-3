@@ -21,7 +21,7 @@ export default class AgeCalc {
   }
 
   onVenus() {
-    // this.age = ((this.age / .62).toFixed(2));
-    // return parseFloat(this.age);
+    this.age = ((this.age / .62).toFixed(2));
+    return parseFloat(this.age);
   }
 }
