@@ -23,20 +23,16 @@ describe('AgeCalc', () => {
     // Mercury Tests
     // *************  
     test('Should calculate age and years left on Mercury', () => {
-        expect(reusableCalc.expecMercury()).toBeLessThanOrEqual(4.20);
-        expect(reusableCalc.expecMercury()).toBeGreaterThanOrEqual(4.10);
-        expect(reusableCalc.onMercury()).toBeLessThanOrEqual(295.90);
-        expect(reusableCalc.onMercury()).toBeGreaterThanOrEqual(295.8);
+        expect(reusableCalc.expecMercury()).toEqual(4.2);
+        expect(reusableCalc.onMercury()).toEqual(295.8);
     });
 
     // *************
     // Venus Tests
     // *************
     test('Should calculate age and years left on Venus', () => {
-        expect(reusableCalc.expecVenus()).toBeLessThanOrEqual(1.62);
-        expect(reusableCalc.expecVenus()).toBeGreaterThanOrEqual(1.60);
-        expect(reusableCalc.onVenus()).toBeLessThanOrEqual(114.52);
-        expect(reusableCalc.onVenus()).toBeGreaterThanOrEqual(114.50);
+        expect(reusableCalc.expecVenus()).toEqual(1.6);
+        expect(reusableCalc.onVenus()).toEqual(114.5);
     });
 
     // *************
