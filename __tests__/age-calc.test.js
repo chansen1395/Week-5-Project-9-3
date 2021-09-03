@@ -45,10 +45,10 @@ describe('AgeCalc', () => {
         expect(reusableCalc.onMercury()).toEqual(295.8);
     });
 
-    test('Absolute value', () => {
-      const newCalc = new AgeCalc(100, 0, false);
-        expect(newCalc.expecMercury()).toEqual(99.2);
-        expect(newCalc.onMercury()).toEqual(295.8);
+    test('Should calculate the years over the age expectancy someone has lived w/ abs()', () => {
+      const newCalc = new AgeCalc(100, 0, true);
+        expect(newCalc.expecMercury()).toEqual(116.7);
+        expect(newCalc.onMercury()).toEqual(416.7);
     });
 
     test('Should calculate age and years left on Mercury for unhealthy person', () => {
