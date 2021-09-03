@@ -4,6 +4,8 @@ export default class AgeCalc {
     this.expec = lifeExpectancy;
   }
 
+// Note: try using an object to pass into the constructor for age to refactor
+
   lifeExpec() {
     this.expec = (72 - this.age);
     return this.expec;
