@@ -1,7 +1,7 @@
 export default class AgeCalc {
-  constructor(age, yrsLeft, healthy, userRegion, planet) {
+  constructor(age, healthy, userRegion, planet) {
     this.age = age;
-    this.yrsLeft = yrsLeft;
+    this.yrsLeft = 0;
     this.healthy = healthy;
     this.expectancy = 72;
     this.planet = planet;
@@ -10,10 +10,6 @@ export default class AgeCalc {
     this.region = {"antarctica": 35, "north-america": 70};
   }
 
-  // Overall age of a person is not affected by health. Only years remaining is
-  // adjusted.
-
-  // Refactor code to use objects instead of multiple onPlanet calcs
   lifeOnPlanet() {
     for (const i in this.planets) {
       if (i === this.planet) {
@@ -26,17 +22,16 @@ export default class AgeCalc {
   expectancyPlanet() {
     for (const i in this.planets) {
       if (i === this.planet) {
-        console.log(this.lifeExpec());
+        console.log(this.lifeExpect());
         console.log(this.planets[i]);
-        this.yrsLeft = (this.lifeExpec() / this.planets[i]).toFixed(1);
+        this.yrsLeft = (this.lifeExpect() / this.planets[i]).toFixed(1);
         return parseFloat(this.yrsLeft);
       }
     }
 
   }
 
-
-  lifeExpec() {
+  lifeExpect() {
     for (const i in this.region) {
       if (i === this.userRegion) {
         this.expectancy = this.region[i];
@@ -48,25 +43,5 @@ export default class AgeCalc {
       this.yrsLeft = (this.yrsLeft * .85);
     }
     return Math.abs(this.yrsLeft);
-  }
-
-  expecMercury() {
-    this.yrsLeft = (this.lifeExpec() / .24).toFixed(1);
-    return parseFloat(this.yrsLeft);
-  }
-
-  expecVenus() {
-    this.yrsLeft = (this.lifeExpec() / .62).toFixed(1);
-    return parseFloat(this.yrsLeft);
-  }
-
-  expecMars() {
-    this.yrsLeft = (this.lifeExpec() / 1.88).toFixed(1);
-    return parseFloat(this.yrsLeft);
-  }
-
-  expecJupiter() {
-    this.yrsLeft = (this.lifeExpec() / 11.86).toFixed(1);
-    return parseFloat(this.yrsLeft);
   }
 }
