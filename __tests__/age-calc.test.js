@@ -42,4 +42,12 @@ describe('AgeCalc', () => {
       expect(reusableCalc.expecMars()).toEqual(.5);
       expect(reusableCalc.onMars()).toEqual(37.8);
     });
+
+    // *************
+    // Jupiter Tests
+    // *************
+    test('Should calculate age and years left on Jupiter', () => {
+      expect(reusableCalc.expecJupiter()).toEqual(.1);
+      expect(reusableCalc.onJupiter()).toEqual(6);
+    });
   });
