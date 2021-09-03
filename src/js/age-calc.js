@@ -24,4 +24,9 @@ export default class AgeCalc {
     this.age = ((this.age / .62).toFixed(2));
     return parseFloat(this.age);
   }
+
+  expecVenus() {
+    this.yrsLeft = (this.lifeExpec() / .62).toFixed(2);
+    return parseFloat(this.yrsLeft);
+  }
 }
