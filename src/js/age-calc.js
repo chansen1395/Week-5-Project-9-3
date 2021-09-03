@@ -3,4 +3,6 @@ export default class AgeCalc {
     this.age = ageStart;
   }
 
+  onMercury();
+
 }
