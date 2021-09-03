@@ -14,9 +14,13 @@ describe('AgeCalc', () => {
       expect(newCalc.yrsLeft).toEqual(22);
     });
     
-    test('Should calculate age expectancy', () => {
+    test('Should calculate age expectancy of healhty individual', () => {
       const newCalc = new AgeCalc(71, 1, true);
       expect(newCalc.lifeExpec()).toEqual(1);
+    });
+    test('Should calculate age expectancy of unhealthy individual', () => {
+      const newCalc = new AgeCalc(71, 1, false);
+      expect(newCalc.lifeExpec()).toEqual(.85);
     });
 
     // *************
@@ -25,6 +29,12 @@ describe('AgeCalc', () => {
     test('Should calculate age and years left on Mercury', () => {
         expect(reusableCalc.expecMercury()).toEqual(4.2);
         expect(reusableCalc.onMercury()).toEqual(295.8);
+    });
+
+    test('Should calculate age and years left on Mercury for unhealthy person', () => {
+      const newCalc = new AgeCalc(71, 1, false);
+        expect(newCalc.expecMercury()).toEqual(3.5);
+        expect(newCalc.onMercury()).toEqual(295.8);
     });
 
     // *************
