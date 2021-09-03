@@ -39,11 +39,11 @@ describe('AgeCalc', () => {
         expect(newCalc.onVenus()).toBeGreaterThanOrEqual(1.60);
     });
   
-    // test('Should calculate age and years left on Venus', () => {
-    //     const newCalc = new AgeCalc(71, 0);
-    //     expect(newCalc.expecVenus()).toBeLessThanOrEqual(4.20);
-    //     expect(newCalc.expecVenus()).toBeGreaterThanOrEqual(4.10);
-    //     expect(newCalc.onVenus()).toBeLessThanOrEqual(295.90);
-    //     expect(newCalc.onVenus()).toBeGreaterThanOrEqual(295.8);
-    // });
+    test('Should calculate age and years left on Venus', () => {
+        const newCalc = new AgeCalc(71, 0);
+        expect(newCalc.expecVenus()).toBeLessThanOrEqual(1.62);
+        expect(newCalc.expecVenus()).toBeGreaterThanOrEqual(1.60);
+        expect(newCalc.onVenus()).toBeLessThanOrEqual(114.52);
+        expect(newCalc.onVenus()).toBeGreaterThanOrEqual(114.50);
+    });
   });
