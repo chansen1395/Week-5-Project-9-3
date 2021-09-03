@@ -15,11 +15,14 @@ describe('AgeCalc', () => {
       expect(newCalc.healthy).toEqual(true);
     });
 
-  test('Should calculate the life expectancy', () => {
+  test('Should calculate the life expectancy (in this case, antarctica, outlived exp by 15 years', () => {
       let newAntarctica = new AgeCalc(50, 0, true, "antarctica");
       expect(newAntarctica.lifeExpec()).toEqual(15);
-      // if user lives in Antarctica, life expectancy = 35
-      // if user lives in America, life expectancy = 72
+    });
+
+  test('Should calculate the life expectancy (in this case, antarctica, outlived exp by 15 years', () => {
+      let newAntarctica = new AgeCalc(30, 0, true, "north-america");
+      expect(newAntarctica.lifeExpec()).toEqual(40);
     });
     
     test('Should calculate age expectancy of healhty individual', () => {
