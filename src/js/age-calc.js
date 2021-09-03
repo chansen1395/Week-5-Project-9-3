@@ -1,10 +1,11 @@
 export default class AgeCalc {
-  constructor(age, yrsLeft, healthy, regionExpec) {
+  constructor(age, yrsLeft, healthy, userRegion) {
     this.age = age;
     this.yrsLeft = yrsLeft;
     this.healthy = healthy;
     this.expectancy = 72;
-    this.regionExpec = regionExpec;
+    this.userRegion = userRegion;
+    this.regions = ["antarctica"];
     this.region = {antarctica: 35};
     // this.overExpec = overExpec;
   }
@@ -12,16 +13,20 @@ export default class AgeCalc {
   // Overall age of a person is not affected by health. Only years remaining is
   // adjusted.
   lifeExpec() {
-    for (let i = "" in this.region) {
-      if (this.regionExpec === this.region[i]) {
-        excpectancy = this.region[i];
+    for (let i = 0; i < this.regions.length; i++) {
+      console.log(this.regions[i]);
+      console.log(this.region[i]);
+      if (this.userRegion === this.regions[i]) {
+        this.excpectancy = this.region[i];
+        console.log(this.expectancy);
+        i++;
       } else {};
     }
-    this.yrsLeft = (72 - this.age);
+    this.yrsLeft = (this.expectancy - this.age);
     if (!this.healthy) {
       this.yrsLeft = (this.yrsLeft * .85);
     }
-    return this.yrsLeft;
+    return Math.abs(this.yrsLeft);
   }
 
   onMercury() {

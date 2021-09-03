@@ -16,8 +16,8 @@ describe('AgeCalc', () => {
     });
 
   test('Should calculate the life expectancy', () => {
-      let newCalc = new AgeCalc(50, 0, true, region);
-      expect(newCalc.lifeExpec()).toEqual(35);
+      let newCalc = new AgeCalc(50, 0, true, "antarctica");
+      expect(newCalc.lifeExpec()).toEqual(22);
       // if user lives in Antarctica, life expectancy = 35
       // if user lives in America, life expectancy = 72
     });
@@ -43,6 +43,12 @@ describe('AgeCalc', () => {
     test('Should calculate age and years left on Mercury', () => {
         expect(reusableCalc.expecMercury()).toEqual(4.2);
         expect(reusableCalc.onMercury()).toEqual(295.8);
+    });
+
+    test('Absolute value', () => {
+      const newCalc = new AgeCalc(100, 0, false);
+        expect(newCalc.expecMercury()).toEqual(99.2);
+        expect(newCalc.onMercury()).toEqual(295.8);
     });
 
     test('Should calculate age and years left on Mercury for unhealthy person', () => {
