@@ -18,14 +18,18 @@
 _This application has been created to demonstrate using a project template and implementing classes with Jest for TDD._
 
 * Use the parameters to calculate the life expectancy on certain planets. Then use NPM to test whether parameters pass or fail.
+* On Earth, a person with these parameters is expected to live another 10 Earth-years.
+  - Age: 25
+  - In healthy condition.
+  - Life Expectancy (lives in Antarctica): 35
 * On Earth, a person with these parameters is expected to live another .85 Earth-years.
   - Age: 71
   - In unhealthy condition.
-  - Life Expectancy: 72
+  - Life Expectancy (default region): 72
 * On Mercury, a person with these parameters is expected to live another 4.2 Mercury-years.
   - Age: 71
   - In unhealthy condition.
-  - Life Expectancy: 72
+  - Life Expectancy (default region): 72
 
 
 ## Setup/Installation Requirements

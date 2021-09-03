@@ -21,8 +21,8 @@ describe('AgeCalc', () => {
     });
 
   test('Should calculate the life expectancy (in this case, antarctica, outlived exp by 15 years', () => {
-      let newAntarctica = new AgeCalc(30, 0, true, "north-america");
-      expect(newAntarctica.lifeExpec()).toEqual(40);
+      let newAmerica = new AgeCalc(30, 0, true, "north-america");
+      expect(newAmerica.lifeExpec()).toEqual(40);
     });
     
     test('Should calculate age expectancy of healhty individual', () => {
@@ -43,6 +43,11 @@ describe('AgeCalc', () => {
     // *************
     // Mercury Tests
     // *************  
+    test('Should calculate age and years left on Mercury', () => {
+        const newCalc = new AgeCalc(71, 1, true, "", "mercury");
+        expect(newCalc.lifeOnPlanet()).toEqual(295.8);
+    });
+
     test('Should calculate age and years left on Mercury', () => {
         expect(reusableCalc.expecMercury()).toEqual(4.2);
         expect(reusableCalc.onMercury()).toEqual(295.8);

@@ -1,33 +1,35 @@
 export default class AgeCalc {
-  constructor(age, yrsLeft, healthy, userRegion) {
+  constructor(age, yrsLeft, healthy, userRegion, planet) {
     this.age = age;
     this.yrsLeft = yrsLeft;
     this.healthy = healthy;
     this.expectancy = 72;
+    this.planet = planet;
+    this.planets = {"mercury": .24, "venus": .62, "mars": 1.88, "jupiter": 11.86};
     this.userRegion = userRegion;
-    this.regions = ["antarctica"];
-    this.region = {"antarctica": 35};
-    // this.overExpec = overExpec;
+    this.region = {"antarctica": 35, "north-america": 70};
   }
 
   // Overall age of a person is not affected by health. Only years remaining is
   // adjusted.
+
+  // Refactor code to use objects instead of multiple onPlanet calcs
+  lifeOnPlanet() {
+    for (const i in this.planets) {
+      if (i === this.planet) {
+        this.age = ((this.age / this.planets[i]).toFixed(1));
+        return parseFloat(this.age);
+      }
+    }
+  }
+
   lifeExpec() {
     for (const i in this.region) {
       if (i === this.userRegion) {
-        console.log("region: " + this.region[i]);
         this.expectancy = this.region[i];
       }
     }
-    // for (let i = 0; i < this.regions.length; i++) {
-    //   console.log(this.regions[i]);
-    //   console.log(this.region[i]);
-    //   if (this.userRegion === this.regions[i]) {
-    //     this.excpectancy = this.region[i];
-    //     console.log(this.expectancy);
-    //     i++;
-    //   } else {};
-    // }
+
     this.yrsLeft = (this.expectancy - this.age);
     if (!this.healthy) {
       this.yrsLeft = (this.yrsLeft * .85);
