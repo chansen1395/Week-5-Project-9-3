@@ -16,8 +16,8 @@ describe('AgeCalc', () => {
     });
 
   test('Should calculate the life expectancy', () => {
-      let newCalc = new AgeCalc(50, 0, true, "antarctica");
-      expect(newCalc.lifeExpec()).toEqual(22);
+      let newAntarctica = new AgeCalc(50, 0, true, "antarctica");
+      expect(newAntarctica.lifeExpec()).toEqual(15);
       // if user lives in Antarctica, life expectancy = 35
       // if user lives in America, life expectancy = 72
     });
