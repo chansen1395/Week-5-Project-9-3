@@ -40,10 +40,10 @@ export default class AgeCalc {
     return parseFloat(this.yrsLeft);
   }
 
-  // onJupiter() {
-  //   this.age = ((this.age / 11.86).toFixed(1));
-  //   return parseFloat(this.age);
-  // }
+  onJupiter() {
+    this.age = ((this.age / 11.86).toFixed(1));
+    return parseFloat(this.age);
+  }
 
   expecJupiter() {
     this.yrsLeft = (this.lifeExpec() / 11.86).toFixed(1);

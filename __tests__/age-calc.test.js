@@ -48,6 +48,6 @@ describe('AgeCalc', () => {
     // *************
     test('Should calculate age and years left on Jupiter', () => {
       expect(reusableCalc.expecJupiter()).toEqual(.1);
-      // expect(reusableCalc.onJupiter()).toEqual(6);
+      expect(reusableCalc.onJupiter()).toEqual(6);
     });
   });
