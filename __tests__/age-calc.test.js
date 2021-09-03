@@ -19,9 +19,11 @@ describe('AgeCalc', () => {
         expect(newCalc.lifeExpec()).toEqual(1);
     });
 
-    test('Should calculate years left on Mercury', () => {
+    test('Should calculate age and years left on Mercury', () => {
         const newCalc = new AgeCalc(71, 0);
         expect(newCalc.expecMercury()).toBeLessThanOrEqual(4.20);
         expect(newCalc.expecMercury()).toBeGreaterThanOrEqual(4.10);
+        expect(newCalc.onMercury()).toBeLessThanOrEqual(295.90);
+        expect(newCalc.onMercury()).toBeGreaterThanOrEqual(295.8);
     });
 });
