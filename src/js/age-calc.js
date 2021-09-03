@@ -23,6 +23,19 @@ export default class AgeCalc {
     }
   }
 
+  expectancyPlanet() {
+    for (const i in this.planets) {
+      if (i === this.planet) {
+        console.log(this.lifeExpec());
+        console.log(this.planets[i]);
+        this.yrsLeft = (this.lifeExpec() / this.planets[i]).toFixed(1);
+        return parseFloat(this.yrsLeft);
+      }
+    }
+
+  }
+
+
   lifeExpec() {
     for (const i in this.region) {
       if (i === this.userRegion) {
@@ -37,19 +50,9 @@ export default class AgeCalc {
     return Math.abs(this.yrsLeft);
   }
 
-  onMercury() {
-    this.age = ((this.age / .24).toFixed(1));
-    return parseFloat(this.age);
-  }
-
   expecMercury() {
     this.yrsLeft = (this.lifeExpec() / .24).toFixed(1);
     return parseFloat(this.yrsLeft);
-  }
-
-  onVenus() {
-    this.age = ((this.age / .62).toFixed(1));
-    return parseFloat(this.age);
   }
 
   expecVenus() {
@@ -57,19 +60,9 @@ export default class AgeCalc {
     return parseFloat(this.yrsLeft);
   }
 
-  onMars() {
-    this.age = ((this.age / 1.88).toFixed(1));
-    return parseFloat(this.age);
-  }
-
   expecMars() {
     this.yrsLeft = (this.lifeExpec() / 1.88).toFixed(1);
     return parseFloat(this.yrsLeft);
-  }
-
-  onJupiter() {
-    this.age = ((this.age / 11.86).toFixed(1));
-    return parseFloat(this.age);
   }
 
   expecJupiter() {

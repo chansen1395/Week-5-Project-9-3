@@ -42,15 +42,15 @@ describe('AgeCalc', () => {
 
     
     test('Should calculate the years over the age expectancy someone has lived w/ abs()', () => {
-      const newCalc = new AgeCalc(100, 0, true);
+      const newCalc = new AgeCalc(100, 0, true, "", "mercury");
       expect(newCalc.expecMercury()).toEqual(116.7);
-      expect(newCalc.onMercury()).toEqual(416.7);
+      expect(newCalc.lifeOnPlanet()).toEqual(416.7);
     });
     
     test('Should calculate age and years left on Mercury for unhealthy person', () => {
-      const newCalc = new AgeCalc(71, 1, false);
+      const newCalc = new AgeCalc(71, 1, false, "", "mercury");
       expect(newCalc.expecMercury()).toEqual(3.5);
-      expect(newCalc.onMercury()).toEqual(295.8);
+      expect(newCalc.lifeOnPlanet()).toEqual(295.8);
     });
     
     // *************
@@ -82,6 +82,7 @@ describe('AgeCalc', () => {
     // *************
     test('Should calculate age and years left on Jupiter', () => {
       const newCalc = new AgeCalc(71, 1, true, "", "jupiter");
+      expect(newCalc.expectancyPlanet()).toEqual(.1);
       expect(newCalc.lifeOnPlanet()).toEqual(6);
       // expect(reusableCalc.expecJupiter()).toEqual(.1);
       // expect(reusableCalc.onJupiter()).toEqual(6);
