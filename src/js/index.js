@@ -1,25 +1,25 @@
-import $ from 'jquery';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../css/styles.css';
-import AgeCalc from './age-calc.js';
+// import $ from 'jquery';
+// import 'bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import '../css/styles.css';
+// import AgeCalc from './age-calc.js';
 
 
 // $(function () {
-//   $('#haiku-checker-form').submit(function (event) {
+//   $('#planet-age-form').submit(function (event) {
 //     event.preventDefault();
 //     $("#response").empty();
-//     const line1 = $('#line1').val();
-//     const line2 = $('#line2').val();
+//     const currentAge = $('#age').val();
+//     const planet = $('#planet').val();
 //     const line3 = $('#line3').val();
-//     const haiku = new Haiku(line1, line2, line3);
-//     const output = haiku.checkLines();
+//     const newCalc = new AgeCalc(age, health, userRegion, planet);
+//     const output = newCalc.checkLines();
 //     if (output) {
 //       $('#response').append(`<li>${haiku.line1}</li>`);
 //       $('#response').append(`<li>${haiku.line2}</li>`);
 //       $('#response').append(`<li>${haiku.line3}</li>`);
 //     } else {
-//       $('#response').append(`<p>Your "haiku" is not a haiku. Try again.</p>`);
+//       $('#response').append(`<p></p>`);
 //     }
 //   });
 // });
