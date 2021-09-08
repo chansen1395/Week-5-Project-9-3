@@ -17,7 +17,7 @@
 
 _This application has been created to demonstrate using a project template and implementing classes with Jest for TDD._
 
-* Use the parameters to calculate the life expectancy on certain planets. Then use NPM to test whether parameters pass or fail.
+* Use the parameters to calculate the life expectancy on certain planets. Then use the command: _$ npm test_ to run Jest to test whether parameters pass or fail.
 * On Earth, a person with these parameters is expected to live another 10 Earth-years.
   - Age: 25
   - In healthy condition.
